@@ -5,10 +5,7 @@ import Home from './components/Home/index'
 function App() {
   return (
     <div className="app">
-      <h1>Hello</h1>
-      {/* HEADER */}
       <Header />
-      {/* HOME */}
       <Home />
     </div>
   );
