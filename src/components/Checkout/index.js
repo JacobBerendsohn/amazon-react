@@ -1,5 +1,6 @@
 import React from 'react'
 import './index.css'
+import Subtotal from '../Subtotal/index'
 
 const index = () => {
   return (
@@ -11,6 +12,9 @@ const index = () => {
                     Your Shopping Cart
                 </h2>
             </div>
+        </div>
+        <div className='checkout-right'>
+            <Subtotal />
         </div>
     </div>
   )

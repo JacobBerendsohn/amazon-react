@@ -1,12 +1,19 @@
 import React from 'react'
 import './index.css'
+import { Link } from 'react-router-dom'
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { useStateValue } from '../../context/StateProvider';
 
-const index = () => {
+function Header() {
+
+    const [{ cart }, dispatch] = useStateValue();
+
   return (
     <div className='header'>
-        <img src='http://pngimg.com/uploads/amazon/amazon_PNG11.png' className='header-logo' />
+        <Link to='/'>
+            <img src='http://pngimg.com/uploads/amazon/amazon_PNG11.png' className='header-logo' />
+        </Link>
         <div className='header-search'>
             <input className='header-searchInput' type='text' />
             <SearchIcon className='header-searchIcon' />
@@ -36,15 +43,17 @@ const index = () => {
                     Prime
                 </span>
             </div>
-            <div className='header-optionCart'>
-                <ShoppingCartIcon />
-                <span className='header-optionLineTwo header-cartCount'>
-                0
-                </span>
-            </div>
+            <Link to='/checkout'>
+                <div className='header-optionCart'>
+                    <ShoppingCartIcon />
+                    <span className='header-optionLineTwo header-cartCount'>
+                        {cart?.length}
+                    </span>
+                </div>
+            </Link>
         </div>
     </div>
   )
 }
 
-export default index
+export default Header
