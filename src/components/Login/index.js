@@ -7,6 +7,16 @@ function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const signIn = e => {
+      e.preventDefault();
+
+  }
+
+  const register = e => {
+    e.preventDefault();
+
+  } 
+
   return (
     <div className='login'>
         <Link to='/'>
@@ -20,20 +30,20 @@ function Login() {
                 <h5 className='login-headerFive'>
                     Email
                 </h5>
-                <input className='login-textInput' type='text' />
+                <input className='login-textInput' type='text' value={email} onChange={e => setEmail(e.target.value)}/>
 
                 <h5 className='login-headerFive'>
                     Password
                 </h5>
-                <input className='login-textInput' type='password' />
+                <input className='login-textInput' type='password' value={password} onChange={e => setPassword(e.target.value)}/>
 
-                <button className='login-signInButton'>Login</button>
+                <button className='login-signInButton' type='submit' onClick={signIn}>Login</button>
 
                 <p className='login-p'>
                   By signing in you agree to the terms and conditions of my AMAZON CLONE.
                 </p>
 
-                <button className='login-registerButton'>Create Account</button>
+                <button className='login-registerButton' onClick={register}>Create Account</button>
             </form>
         </div>
     </div>
