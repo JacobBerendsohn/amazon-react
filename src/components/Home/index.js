@@ -1,13 +1,29 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Loader from 'react-loaders'
 import './index.css'
 import Product from '../Product/index'
+import { useResultContext } from '../../context/ResultContextProvider';
 
 const testTitle = 'Test Item';
 const testImg = 'https://www.ondemandcmo.com/wp-content/uploads/2016/03/canstockphoto22402523-arcos-creator.com_-1024x1024.jpg'
 const testPrice = 19.99;
 const testRating = 5;
 
-const index = () => {
+const Home = () => {
+
+    const { results, isLoading, getResults, searchTerm } = useResultContext();
+
+    useEffect(() => {
+        if(searchTerm) {
+            getResults(`${searchTerm}`)
+        }
+      }, [searchTerm]);
+
+    if(isLoading) return (
+        <div className='flex justify-center items-center'>
+            <Loader type="Rings" color="#00BFFF" height={550} width={80} />
+        </div>
+      )
   return (
     <div className='home'>
         <div className='home-container'>
@@ -29,4 +45,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Home
