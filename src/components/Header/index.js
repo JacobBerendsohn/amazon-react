@@ -28,7 +28,7 @@ function Header() {
             <Link to={!user && '/login'}>
                 <div onClick={handleAuthentication} className='header-option'>
                     <span className='header-optionLineOne'>
-                        Hello Guest
+                        {user ? `Hello ${user.email.substring(0, user.email.indexOf('@')).toUpperCase()}` : 'Hello Guest'}
                     </span>
                     <span className='header-optionLineTwo'>
                         {user ? 'Sign Out' : 'Sign In'}
