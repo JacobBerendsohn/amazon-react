@@ -31,6 +31,7 @@ const Home = () => {
             <div className='home-row'>
                 <Product id={1} title={testTitle} image={testImg} price={testPrice} rating={testRating} />
                 <Product id={2} title={testTitle} image={testImg} price={testPrice} rating={testRating} />
+                <Product id={7} title={testTitle} image={testImg} price={testPrice} rating={testRating} />
             </div>
             <div className='home-row'>
                 <Product id={3} title={testTitle} image={testImg} price={testPrice} rating={testRating} />
