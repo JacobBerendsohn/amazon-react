@@ -1,7 +1,7 @@
 ### Description
 
 This is an Amazon clone application built using Node.js with React.\
-Login/Signup functionality handled with Firebase.\
+Authentication functionality handled with Firebase.\
 API calls handled with Axios.\
 Icons taken from 'Material Icons'.
 
