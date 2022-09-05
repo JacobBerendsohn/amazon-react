@@ -1,9 +1,23 @@
-### Description
+# React Amazon Clone
 
-This is an Amazon clone application built using Node.js with React.\
-Authentication functionality handled with Firebase.\
-API calls handled with Axios.\
-Icons taken from 'Material Icons'.
+## Table of Contents
+
+- [Overview](#overview)
+- [Built With](#built-with)
+- [Features](#features)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
+
+## Overview
+
+This project was a fun practice of practical API utilization with axios as well as general application development with React. Firebase was a very easy tool to use to handle authentication easily and efficiently. This project also uses Material UI Icons, which is a great library for professional looking Icons for projects.
+
+### Built With
+
+- [Node.js](https://nodejs.org/en/)
+- [Google Firebase](https://firebase.google.com/)
+- [Axios](https://axios-http.com/docs/intro)
+- [Material UI](https://mui.com/)
 
 ### Dependencies
 
@@ -23,3 +37,7 @@ react-loaders: ^3.0.1,\
 react-router-dom: ^6.3.0,\
 react-scripts: 5.0.1,\
 web-vitals: ^2.1.4
+
+## Features
+
+This project pulls information from an Amazon Search API to return items that are listed on the site. Items can be added to cart and viewed when logged in or as a guest.
